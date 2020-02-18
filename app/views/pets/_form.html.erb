@@ -1,0 +1,24 @@
+<%#= form_for(@pet) do |f|%>
+  <%#= f.label :name %>
+  <%#= f.text_field :name %>
+
+  <%#= f.label :species %>
+  <%#= f.select :species, collection: Pet::SPECIES %>
+
+  <%#= f.label :address %>
+  <%#= f.text_field :address %>
+
+  <%#= f.label :found_on %>
+  <%#= f.text_field :found_on %>
+
+  <%#= f.submit %>
+<%# end %>
+
+
+<%= simple_form_for(@pet) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.input :address %>
+  <%= f.input :found_on %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
